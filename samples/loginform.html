@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+	<head>
+
+            <title>Login Form</title>
+            <style>
+				
+                
+				.orgdetails
+				{
+					width: 100%;
+					height:90px;
+					font: normal 20px/1.4 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+					color:rgb(51, 206, 64);
+					text-align: center;
+				}
+				.orgshort
+				{
+					font: normal 20px/1.4 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+					color:rgb(72, 72, 180);
+					text-align: center;
+					width: 100%;
+					height:30px;
+				}
+				h2
+				{
+					text-align: center;
+				}
+				.actualform
+				{
+					text-align: center;
+					
+					margin: auto;
+					
+					display: block;
+
+				}
+				
+				.thankyoucard
+				{
+					display:none;
+				}
+				
+				div
+				{
+					
+					padding-left:7px;
+					padding-right:7px;
+					padding-top:4px;
+					padding-bottom:4px;
+					margin-top:8px;
+					text-align: center;
+					
+				
+				}
+
+
+            </style>
+            <script>
+				function Save()
+				{
+					var x=document.getElementsByClassName("actualform")[0];
+					var y=document.getElementsByClassName("thankyoucard")[0];
+					if(x.style.display==="none")
+					{
+						x.style.display="block";
+						y.style.display="none";
+					}
+					else
+					{
+						x.style.display="none";
+						y.style.display="block";
+					}
+				}
+				
+            </script>
+		
+	</head>
+	<body>
+         <div class="orgshort">
+                    <h1>
+                        <img src="loginformimages/logo.png" alt="LOGO" align="top" width=50px height=50px >
+                        OrgName
+                    </h2>
+                    
+          </div>
+            <div class="orgdetails">
+                    <h1 >ORG FULL NAME</h1>
+                    <p>Address:
+                    No.,Building , Street , City Pincode
+             </div>
+		<div  id="formbody">
+			<div>
+				<h2>Data Input Form</h2>
+			</div>
+			<div class="actualform">
+				<form name="data">
+					
+					<p>Name : <input type="text" name="Name" ></p><br>
+					<p>ID : <input type="text" name="id"></p><br>
+					<p>Mobile : <input type="number" name="mol" ></p><br>
+					
+					<p>Gender : <input type="radio" value="Male" name="gender" >Male</input>
+					<input type="radio" name="gender" value="Female">Female</input>
+					<input type="radio" name="gender" value="Other">Other</input></p><br>
+					
+				</form>
+				<button onclick="Save()">Save</button>
+				<button onclick="Cancel()">Cancel</button>
+		    </div>
+		</div>
+		<div  class="thankyoucard">
+			<p>Thank You</p>
+			
+			<button onclick="Save()">Re-enter</button>
+		</div>
+	</body>
+</html>
